@@ -3,7 +3,9 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: 2021-07-06 - 12:00:22 +0000
+    app.quarkus.io/vcs-url: https://github.com/aavn-ct-workshop/centralized-configuration-challenge.git
+    app.quarkus.io/build-timestamp: 2021-07-07 - 11:32:25 +0000
+    app.quarkus.io/commit-id: 8c9cf40f64ec2dbea92544da872a90ed69989973
   labels:
     app.kubernetes.io/name: payment-service
     app.kubernetes.io/version: 1.0.0
@@ -23,7 +25,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    app.quarkus.io/build-timestamp: 2021-07-06 - 12:00:22 +0000
+    app.quarkus.io/vcs-url: https://github.com/aavn-ct-workshop/centralized-configuration-challenge.git
+    app.quarkus.io/build-timestamp: 2021-07-07 - 11:32:25 +0000
+    app.quarkus.io/commit-id: 8c9cf40f64ec2dbea92544da872a90ed69989973
   labels:
     app.kubernetes.io/version: 1.0.0
     app.kubernetes.io/name: payment-service
@@ -38,7 +42,9 @@ spec:
   template:
     metadata:
       annotations:
-        app.quarkus.io/build-timestamp: 2021-07-06 - 12:00:22 +0000
+        app.quarkus.io/vcs-url: https://github.com/aavn-ct-workshop/centralized-configuration-challenge.git
+        app.quarkus.io/build-timestamp: 2021-07-07 - 11:32:25 +0000
+        app.quarkus.io/commit-id: 8c9cf40f64ec2dbea92544da872a90ed69989973
       labels:
         app.kubernetes.io/version: 1.0.0
         app.kubernetes.io/name: payment-service
