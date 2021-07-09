@@ -36,10 +36,10 @@ export default {
   },
   methods: {
     async fetchData() {
-      fetch(new URL(process.env.VUE_APP_MERCHANT_API + '/' + this.id))
+      fetch(new URL(process.env.VUE_APP_MERCHANT_API + '/' + this.id, process.env.VUE_APP_BACKEND_URI))
         .then((data) => data.json())
         .then((json) => (this.merchant = json));
-      fetch(new URL(process.env.VUE_APP_FOOD_API + '/' + this.id))
+      fetch(new URL(process.env.VUE_APP_FOOD_API + '/' + this.id, process.env.VUE_APP_BACKEND_URI))
         .then((data) => data.json())
         .then((json) => (this.merchant = { ...this.merchant, foods: json }));
     },

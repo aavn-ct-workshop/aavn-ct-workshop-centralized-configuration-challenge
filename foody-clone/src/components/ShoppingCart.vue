@@ -65,7 +65,7 @@ export default {
     },
         body: JSON.stringify(order)
       };
-      const url = new URL(process.env.VUE_APP_ORDER_API);
+      const url = new URL(process.env.VUE_APP_ORDER_API, process.env.VUE_APP_BACKEND_URI);
       try {
         const data = await fetch(url, opts);
         if (data.status == 200) {

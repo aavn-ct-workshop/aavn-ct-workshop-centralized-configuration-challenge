@@ -11,9 +11,14 @@ import vn.axonactive.model.Wallet;
 
 @ApplicationScoped
 public class WalletService {
-    private final Set<Wallet> wallets = Collections.newSetFromMap(Collections.synchronizedMap(new LinkedHashMap<>()));
+    private Set<Wallet> wallets;
 
     public WalletService() {
+        init();
+    }
+
+    public void init() {
+        wallets = Collections.newSetFromMap(Collections.synchronizedMap(new LinkedHashMap<>()));
         wallets.add(new Wallet("1", "test1", 100));
         wallets.add(new Wallet("2", "test2", 200));
         wallets.add(new Wallet("3", "test3", 300));

@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     fetchMerchants() {
-      fetch(new URL(process.env.VUE_APP_MERCHANT_API), {
+      fetch(new URL(process.env.VUE_APP_MERCHANT_API, process.env.VUE_APP_BACKEND_URI), {
         headers: {
           "Content-Type": "application/json",
           Authorization:

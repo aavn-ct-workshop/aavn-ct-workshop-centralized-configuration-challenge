@@ -48,7 +48,7 @@ public class MerchantResource {
     }
 
     @GET
-    //@Authenticated
+    @Authenticated
     public Response getAllMerchants() {
         return Response.ok(merchants).build();
     }
